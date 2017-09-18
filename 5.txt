@@ -1,0 +1,4 @@
+5. When the project is using Spring 4.3  and Hibernate 5.2, how to write the JUnit test without bounded with concrete DB closely. In other words, How to mock DB in JUnit test for service method.  If not possible give the reason else list cases for the different scenario. 
+To mock the DB in JUnit test for the service method, we can create a Entity class, a DAO class wihch returns this Entity class, and a Service class wich has the reference to this DAO class.
+Scenario 1, we can create test to mock the DAO class, verify that when we call the method of ther service class, the mock object has been called.
+Scenario 2, create an Entity object, execute the function and verify the DAO class.
